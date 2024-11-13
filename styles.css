@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    margin: 0;
+    perspective: 1000px;  /* Ajoute de la perspective pour l'effet 3D */
+  }
+  
+  /* Trou noir central */
+  .black-hole {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #000, #111 80%);
+    border-radius: 50%;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 1), inset 0 0 30px #000;
+    z-index: 2;
+  }
+
+  /* Conteneur des particules */
+  .particles-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Style de base des particules */
+  .particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(255, 200, 150, 0.8);
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  /* Animations pour différents flux de particules */
+  @keyframes orbit1 {
+    0% { transform: translateX(var(--start-x)) translateY(var(--start-y)) scale(1); opacity: 1; }
+    100% { transform: translateX(0) translateY(0) scale(0.5); opacity: 0; }
+  }
+
+  @keyframes orbit2 {
+    0% { transform: translateX(var(--start-x)) translateY(var(--start-y)) scale(1); opacity: 1; }
+    100% { transform: translateX(0) translateY(0) scale(0.5); opacity: 0; }
+  }
+
+  @keyframes orbit3 {
+    0% { transform: translateX(var(--start-x)) translateY(var(--start-y)) scale(1); opacity: 1; }
+    100% { transform: translateX(0) translateY(0) scale(0.5); opacity: 0; }
+  }
+
+  @keyframes orbit4 {
+    0% { transform: translateX(var(--start-x)) translateY(var(--start-y)) scale(1); opacity: 1; }
+    100% { transform: translateX(0) translateY(0) scale(0.3); opacity: 0; }
+  }
+
+  @keyframes orbit5 {
+    0% { transform: translateX(var(--start-x)) translateY(var(--start-y)) scale(1); opacity: 1; }
+    100% { transform: translateX(0) translateY(0) scale(0.4); opacity: 0; }
+  }
+
+  @keyframes orbit6 { 0% { transform: translateX(var(--start-x)) translateY(var(--start-y)) scale(1); opacity: 0.7; } 100% { transform: translateX(0) translateY(0) scale(0.6); opacity: 0; } }
+  @keyframes orbit7 { 0% { transform: translateX(var(--start-x)) translateY(var(--start-y)) scale(1); opacity: 1; } 100% { transform: translateX(0) translateY(0) scale(0.5); opacity: 0; } }
+  @keyframes orbit8 { 0% { transform: translateX(var(--start-x)) translateY(var(--start-y)) scale(1); opacity: 0.9; } 100% { transform: translateX(0) translateY(0) scale(0.7); opacity: 0; } }
+  @keyframes orbit9 { 0% { transform: translateX(var(--start-x)) translateY(var(--start-y)) scale(1); opacity: 1; } 100% { transform: translateX(0) translateY(0) scale(0.6); opacity: 0; } }
+  @keyframes orbit10 { 0% { transform: translateX(var(--start-x)) translateY(var(--start-y)) scale(1); opacity: 0.7; } 100% { transform: translateX(0) translateY(0) scale(0.8); opacity: 0; } }
